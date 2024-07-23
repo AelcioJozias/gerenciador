@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.List, br.com.jozias.gerenciador.servlet.Enterprise"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +16,8 @@
 	
 	<ul>
 		<c:forEach items="${enterprises}" var="enterprise">
-			<li>${ enterprise.name }</li>
+			<li>${ enterprise.name } - <fmt:formatDate pattern="dd/MM/yyyy" value="${ enterprise.openedDate }"/> </li>
+			
 		</c:forEach>
 	</ul>
 	

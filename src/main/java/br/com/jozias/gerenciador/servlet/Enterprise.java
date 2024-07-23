@@ -1,10 +1,19 @@
 package br.com.jozias.gerenciador.servlet;
 
+import java.util.Date;
+
 public class Enterprise {
 
 	private Integer id;
 	private String name;
+	private Date openedDate = new Date();
 	
+	public Date getOpenedDate() {
+		return openedDate;
+	}
+	public void setOpenedDate(Date openedDate) {
+		this.openedDate = openedDate;
+	}
 	public int getId() {
 		return id;
 	}
