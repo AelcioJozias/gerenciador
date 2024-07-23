@@ -1,0 +1,29 @@
+# Eclipse specific files
+.classpath
+.project
+.settings/
+build
+# Eclipse working sets
+.idea/
+
+# Eclipse Core settings
+.core/
+
+# Eclipse local history
+.localhistory/
+
+# Eclipse files
+*.swp
+*.bak
+*~.nib
+*.tmp
+*.temp
+*.backup
+*.deploy
+*.launch
+
+# Eclipse configuration folder
+.metadata/
+
+# Eclipse crash reports
+hs_err_pid*

@@ -1,1 +1,3 @@
-# gerenciador
+# Gerenciador
+
+Training Java EE technologies
