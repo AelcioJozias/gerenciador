@@ -1,3 +1,10 @@
+<% 
+//scriptlet
+String enterpriseName = (String) request.getAttribute("enterprise");
+System.out.println(enterpriseName);
+
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +12,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Enterprise " + enterpriseName + " saved with success!
+Enterprise <%= enterpriseName %> saved with success!
 </body>
 </html>

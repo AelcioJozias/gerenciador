@@ -10,14 +10,13 @@ public class Database {
 
 	private static List<Enterprise> enterprises = new ArrayList<>();
 	
-	{
+	static {
 		Enterprise enterprise1 = new Enterprise();
 		enterprise1.setId(1);
 		enterprise1.setName("Google");
 		Enterprise enterprise2 = new Enterprise();
 		enterprise2.setId(2);
 		enterprise2.setName("Microsoft");
-			
 		enterprises.add(enterprise1);
 		enterprises.add(enterprise2);
 	}
