@@ -34,11 +34,7 @@ public class NewEnterpriseServelet extends HttpServlet {
 		enterprise.setOpenedDate(openedDate);
 		Database database = new Database();
 		database.add(enterprise);
-		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/newEnterpriseCreated.jsp");
-		request.setAttribute("enterprise", enterprise.getName());
-		dispatcher.forward(request, response);
-		
+		response.sendRedirect("listEnterprises");
 	}
 
 }

@@ -11,8 +11,11 @@
 <title>Gerenciador</title>
 </head>
 <body>
-
-	<h1>Enterprises</h1>
+	<c:if test="${ not empty enterprise	 }">
+		Enterprise ${ enterprise } saved with success!
+	</c:if>
+	<br>
+	<h2>Enterprises</h2>
 	
 	<ul>
 		<c:forEach items="${enterprises}" var="enterprise">
