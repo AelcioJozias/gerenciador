@@ -29,10 +29,10 @@ public class NewEnterpriseServelet extends HttpServlet {
 		} catch (ParseException e) {
 			throw new ServletException(e);
 		}
+		Database database = new Database();
 		Enterprise enterprise = new Enterprise();
 		enterprise.setName(enterpriseName);
 		enterprise.setOpenedDate(openedDate);
-		Database database = new Database();
 		database.add(enterprise);
 		response.sendRedirect("listEnterprises");
 	}

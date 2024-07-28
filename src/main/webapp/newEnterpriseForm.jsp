@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="${linkServeletNewEnterprise}" method="post">
-		<label for="enterprise">Nome:</label>
+		<label for="name">Nome:</label>
 		<input name="name" type="text"/>
 		<label for="date">Data Abertura:</label>
 		<input name="date" type="text"/>
