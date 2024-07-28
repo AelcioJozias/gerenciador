@@ -24,13 +24,17 @@ public class Database {
 		enterprises.add(enterprise2);
 	}
 	
+	public List<Enterprise> getEnterprises() {
+		return enterprises;
+	}
+	
 	public void add(Enterprise enterprise) {
 		enterprise.setId(Database.sequenceId++);
 		enterprises.add(enterprise);
 	}
-
-	public List<Enterprise> getEnterprises() {
-		return enterprises;
+	
+	public void delete(Enterprise enterprise) {
+		Database.enterprises.remove(enterprise);
 	}
 	
 	public Enterprise getEnterpriseById(int id) throws ServletException {

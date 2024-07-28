@@ -22,6 +22,6 @@ public class DeleteEnterpriseServlet extends HttpServlet {
 			Database database = new Database();
 			List<Enterprise> enterprises = database.getEnterprises();
 			Enterprise enterprise = database.getEnterpriseById(id);
-			enterprises.remove(enterprise);
+			database.delete(enterprise);
 		}
 }
