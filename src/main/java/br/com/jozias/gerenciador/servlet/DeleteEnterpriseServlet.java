@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.jozias.gerenciador.model.Database;
+import br.com.jozias.gerenciador.model.Enterprise;
+
 /**
  * Servlet implementation class DeleteEnterpriseServlet
  */
