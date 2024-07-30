@@ -1,4 +1,4 @@
-package br.com.jozias.gerenciador.servlet;
+package br.com.jozias.gerenciador.action;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -6,24 +6,18 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.jozias.gerenciador.model.Database;
 import br.com.jozias.gerenciador.model.Enterprise;
 
-/**
- * Servlet implementation class NewEnterpriseServelet
- */
-@WebServlet("/newEnterprise")
-public class NewEnterpriseServelet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+public class NewEnterprise implements Action{
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String enterpriseName = request.getParameter("name");
-		String openedDateEnterpriseParam  = request.getParameter("date");
+	@Override
+	public String execute(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		String enterpriseName = req.getParameter("name");
+		String openedDateEnterpriseParam  = req.getParameter("date");
 		Date openedDate = null;
 		try {
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -36,7 +30,7 @@ public class NewEnterpriseServelet extends HttpServlet {
 		enterprise.setName(enterpriseName);
 		enterprise.setOpenedDate(openedDate);
 		database.add(enterprise);
-		response.sendRedirect("listEnterprises");
+		return RedirectAction.REDIRECT.value() + "entry?action=ListEnterprise";
 	}
 
 }
