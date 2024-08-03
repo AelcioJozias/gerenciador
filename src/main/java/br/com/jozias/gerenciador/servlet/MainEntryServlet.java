@@ -21,7 +21,6 @@ import br.com.jozias.gerenciador.action.ListEnterprise;
 public class MainEntryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	@SuppressWarnings("deprecation")
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String actionParamater = req.getParameter("action");

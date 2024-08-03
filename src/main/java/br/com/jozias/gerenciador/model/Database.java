@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 public class Database {
 
 	private static List<Enterprise> enterprises = new ArrayList<>();
+	private static List<User> users = new ArrayList<>();
 	private static Integer sequenceId = 1;
 	
 	static {
@@ -22,6 +23,12 @@ public class Database {
 		enterprise2.setName("Microsoft");
 		enterprises.add(enterprise1);
 		enterprises.add(enterprise2);
+		
+		User u1 = new User("jozias", "123");
+		User u2 = new User("bia", "321");
+		
+		users.add(u1);
+		users.add(u2);
 	}
 	
 	public List<Enterprise> getEnterprises() {
@@ -43,5 +50,14 @@ public class Database {
 				.findFirst().orElseThrow(
 				() -> new ServletException(
 						new ClassNotFoundException("Dont exist a enterprise with this id")));
+	}
+
+	public User existUser(String login, String password) {
+		for(User user : users) {
+			if(user.isEquals(login, password)) {
+				return user;
+			}
+		}
+		return null;
 	}
 }
