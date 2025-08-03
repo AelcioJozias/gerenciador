@@ -1,3 +1,3 @@
 # Gerenciador
 
-Training Java EE technologies
+Esse projeto é de um curso da Alura que ensina sobre Java EE usando servelet, tomcat etc...
